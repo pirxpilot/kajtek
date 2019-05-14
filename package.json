@@ -1,0 +1,42 @@
+{
+  "name": "kajtek",
+  "version": "0.0.0",
+  "description": "Fast and opinionated tinycdb interface.",
+  "author": {
+    "name": "Damian Krzeminski",
+    "email": "pirxpilot@furkot.com",
+    "url": "https://pirxpilot.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pirxpilot/kajtek.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "kajtek",
+    "tinycdb"
+  ],
+  "dependencies": {
+    "@pirxpilot/cmake-js": "~5",
+    "bindings": "^1.5.0",
+    "nan": "^2.13.2",
+    "prebuild-install": "~5"
+  },
+  "devDependencies": {
+    "jshint": "~2",
+    "tap-dot": "^2.0.0",
+    "tape": "~4",
+    "tmp": "~0"
+  },
+  "scripts": {
+    "install": "prebuild-install || cmake-js build",
+    "prebuild": "make prebuild",
+    "test": "make check"
+  },
+  "files": [
+    "index.js",
+    "CMakeLists.txt",
+    "src",
+    "deps"
+  ]
+}
