@@ -53,8 +53,8 @@ MIT © [Damian Krzeminski](https://pirxpilot.me)
 [npm-image]: https://img.shields.io/npm/v/kajtek.svg
 [npm-url]: https://npmjs.org/package/kajtek
 
-[travis-url]: https://travis-ci.org/pirxpilot/kajtek
-[travis-image]: https://img.shields.io/travis/pirxpilot/kajtek.svg
+[travis-url]: https://travis-ci.com/pirxpilot/kajtek
+[travis-image]: https://img.shields.io/travis/com/pirxpilot/kajtek.svg
 
 [deps-image]: https://img.shields.io/david/pirxpilot/kajtek.svg
 [deps-url]: https://david-dm.org/pirxpilot/kajtek

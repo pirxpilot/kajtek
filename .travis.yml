@@ -1,5 +1,18 @@
+dist: xenial
 sudo: false
 language: node_js
 node_js:
   - "node"
   - "lts/*"
+addons:
+  ssh_known_hosts: gitlab.com
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-7
+env:
+  global:
+    - CC=gcc-7
+    - CXX=g++-7
+
