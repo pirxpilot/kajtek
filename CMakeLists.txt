@@ -14,6 +14,7 @@ target_sources(${PROJECT_NAME}
   PRIVATE
     "src/kajtek.cc"
     "src/kajtek.h"
+    "src/ref.h"
     "src/workers.cc"
     "src/workers.h"
     "src/tinycdb.cc"

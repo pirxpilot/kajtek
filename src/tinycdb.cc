@@ -32,7 +32,7 @@ void TinyCDB::StartReading() {
   reading = true;
 }
 
-void TinyCDB::Put(std::tuple<char*, unsigned, char*, unsigned> item) {
+void TinyCDB::Put(refref_t const &item) {
   if (!making) {
     StartMaking();
   }
@@ -42,7 +42,7 @@ void TinyCDB::Put(std::tuple<char*, unsigned, char*, unsigned> item) {
   cdb_make_add(&cdbm, key, klen, val, vlen);
 }
 
-std::tuple<char*, unsigned> TinyCDB::Get(std::tuple<char*, unsigned> item) {
+ref_t TinyCDB::Get(ref_t const &item) {
   if (!reading) {
     StartReading();
   }

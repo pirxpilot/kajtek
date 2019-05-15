@@ -5,6 +5,8 @@
 
 #include <nan.h>
 
+#include "ref.h"
+
 class TinyCDB;
 
 class PutWorker : public Nan::AsyncWorker
@@ -16,7 +18,7 @@ public:
 
 private:
   TinyCDB* tcdb;
-  std::vector<std::tuple<char*, unsigned, char*, unsigned>> data;
+  std::vector<refref_t> data;
 };
 
 class GetWorker : public Nan::AsyncWorker
@@ -29,6 +31,6 @@ public:
 
 private:
   TinyCDB* tcdb;
-  std::vector<std::tuple<char*, unsigned>> keys;
-  std::vector<std::tuple<char*, unsigned>> values;
+  std::vector<ref_t> keys;
+  std::vector<ref_t> values;
 };

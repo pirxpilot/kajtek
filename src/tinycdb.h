@@ -5,6 +5,8 @@
 
 #include <tinycdb/cdb.h>
 
+#include "ref.h"
+
 class TinyCDB {
 public:
 
@@ -12,8 +14,8 @@ public:
     location(location)
     {};
 
-  void Put(std::tuple<char*, unsigned, char*, unsigned> item);
-  std::tuple<char*, unsigned> Get(std::tuple<char*, unsigned> key);
+  void Put(refref_t const & item);
+  ref_t Get(ref_t const & key);
 
 private:
   void StartReading();

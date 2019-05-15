@@ -16,6 +16,8 @@ PutWorker::PutWorker(Nan::Callback* fn, TinyCDB* tcdb, v8::Local<v8::Value> ks, 
 
   const auto len = kbuffers->Length();
 
+  data.reserve(len);
+
   for(auto i = 0; i < len; i++) {
     auto k = kbuffers->Get(i);
     auto v = vbuffers->Get(i);
@@ -44,7 +46,7 @@ GetWorker::GetWorker(Nan::Callback* fn, TinyCDB* tcdb, v8::Local<v8::Value> ks):
 
   auto kbuffers = ks.As<v8::Array>();
 
-  const auto len = kbuffers->Length();
+  auto len = kbuffers->Length();
   keys.reserve(len);
 
   for(auto i = 0; i < len; i++) {
@@ -60,7 +62,7 @@ GetWorker::GetWorker(Nan::Callback* fn, TinyCDB* tcdb, v8::Local<v8::Value> ks):
 void GetWorker::Execute() {
   values.reserve(keys.size());
 
-  for(auto const& item: keys) {
+  for(auto&& item: keys) {
     values.push_back(tcdb->Get(item));
   }
 }
