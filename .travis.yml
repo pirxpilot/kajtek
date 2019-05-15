@@ -1,5 +1,8 @@
+dist: xenial
 sudo: false
 language: node_js
 node_js:
   - "node"
   - "lts/*"
+addons:
+  ssh_known_hosts: gitlab.com
