@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
-set(CMAKE_C_STANDARD 17)
-set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Name of the project (will be the name of the plugin)
 project(kajtek)
